@@ -1,0 +1,19 @@
+{
+  "name": "brites-skill",
+  "owner": { "name": "Henrique Brites" },
+  "metadata": { "description": "Henrique Brites' personal Cursor skills" },
+  "plugins": [
+    {
+      "name": "brites-skill",
+      "source": "./",
+      "description": "commit-message and open-pr skills: generate Conventional Commit messages and open GitHub pull requests grounded in the actual diff.",
+      "version": "0.1.0",
+      "author": { "name": "Henrique Brites" },
+      "homepage": "https://github.com/henriquebrites/brites-skill",
+      "repository": "https://github.com/henriquebrites/brites-skill",
+      "license": "MIT",
+      "keywords": ["skills", "git", "commit", "pull-request"],
+      "category": "productivity"
+    }
+  ]
+}

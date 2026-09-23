@@ -1,0 +1,43 @@
+{
+  "name": "brites-skill",
+  "version": "0.1.0",
+  "description": "CLI to install Henrique Brites' agent skills (commit-message, open-pr) into any project for Claude Code and Cursor",
+  "type": "module",
+  "bin": {
+    "brites-skill": "/bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "skills"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node bin/cli.js list"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "skills",
+    "claude-code",
+    "cursor",
+    "cli"
+  ],
+  "author": "Henrique Brites",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/henriquebrites/brites-skill.git"
+  },
+  "homepage": "https://github.com/henriquebrites/brites-skill#readme",
+  "bugs": {
+    "url": "https://github.com/henriquebrites/brites-skill/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "commander": "^14.0.0"
+  }
+}
