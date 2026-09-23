@@ -4,7 +4,7 @@
   "description": "CLI to install Henrique Brites' agent skills (commit-message, open-pr) into any project for Claude Code and Cursor",
   "type": "module",
   "bin": {
-    "brites-skill": "/bin/cli.js"
+    "brites-skill": "bin/cli.js"
   },
   "files": [
     "bin",

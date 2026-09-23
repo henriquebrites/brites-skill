@@ -51,6 +51,20 @@ node bin/cli.js list
 node bin/cli.js install -a claude   # test install locally
 ```
 
+## Release process
+
+Publishing to npm is automated via [`.github/workflows/publish.yml`](.github/workflows/publish.yml)
+using npm's [Trusted Publishing](https://docs.npmjs.com/trusted-publishers) (OIDC) — no `NPM_TOKEN`
+secret involved. To ship a new version:
+
+```bash
+npm version patch   # or minor / major — bumps package.json and creates a git tag vX.Y.Z
+git push --follow-tags
+```
+
+Pushing the `vX.Y.Z` tag triggers the workflow, which verifies the tag matches
+`package.json`'s version and runs `npm publish --provenance`.
+
 ## License
 
 MIT
