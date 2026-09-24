@@ -1,7 +1,6 @@
 ---
 name: commit-message
 description: Generate concise English Git commit messages following Conventional Commits, based on the actual changes in the repository. Use when creating, reviewing, or improving a commit message.
-disable-model-invocation: true
 ---
 
 # Conventional Commit Message Generator
@@ -72,3 +71,14 @@ Before responding, verify that:
 5. The output contains exactly one commit message and nothing else.
 
 If the available changes are insufficient to determine the intent, ask one concise clarification question instead of guessing.
+
+## Final step
+
+After generating the commit message, ask the user if they want to commit now. Use `AskUserQuestion` to present two options:
+- **Yes**: Execute `git commit` with the generated message.
+- **No**: Just present the message (as today).
+
+If the user chooses **Yes**:
+1. Run `git commit -m "<message>"` via Bash.
+2. Run `git status` to confirm the commit succeeded.
+3. Report the commit was created successfully.
