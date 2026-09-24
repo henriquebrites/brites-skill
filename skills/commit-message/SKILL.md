@@ -1,4 +1,3 @@
-
 ---
 name: commit-message
 description: Generate concise English Git commit messages following Conventional Commits, based on the actual changes in the repository. Use when creating, reviewing, or improving a commit message.
