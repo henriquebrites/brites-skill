@@ -1,6 +1,6 @@
 {
   "name": "brites-skill",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "CLI to install Henrique Brites' agent skills (commit-message, open-pr) into any project for Claude Code and Cursor",
   "type": "module",
   "bin": {
