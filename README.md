@@ -14,6 +14,12 @@ Each skill lives in its own folder under [`skills/`](skills/), the single source
 by this repo itself (via symlinks in `.claude/skills` and `.cursor/skills`) and by the published
 package.
 
+Third-party skills installed for local use in this project only (e.g. via a skill-finder tool)
+should go in `local-skills/` instead, never in `skills/`. `local-skills/` is gitignored and not
+part of the published package — `.claude/skills` and `.cursor/skills` symlink to both folders so
+those skills are still available locally, but they're never committed or published under this
+package's name.
+
 ## Install in another project
 
 ### Option A — npm CLI
