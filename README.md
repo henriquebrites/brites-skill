@@ -9,10 +9,17 @@ Claude Code and Cursor, published as an installable npm CLI and as a Claude Code
 | ----------------------------------------------- | --------------------------------------------------------------------------------------------- |
 | [`commit-message`](skills/commit-message/SKILL.md) | Generates a Conventional Commits-style commit message grounded in the actual staged diff.   |
 | [`open-pr`](skills/open-pr/SKILL.md)               | Opens a GitHub pull request via `gh`, with a title and description derived from the real diff. |
+| [`roadmap-docs`](skills/roadmap-docs/SKILL.md)     | Keeps a human-readable roadmap in `docs/roadmap/`: one file per initiative, an epic on top and small checkbox tasks below. |
 
 Each skill lives in its own folder under [`skills/`](skills/), the single source of truth used both
 by this repo itself (via symlinks in `.claude/skills` and `.cursor/skills`) and by the published
 package.
+
+Third-party skills installed for local use in this project only (e.g. via a skill-finder tool)
+should go in `local-skills/` instead, never in `skills/`. `local-skills/` is gitignored and not
+part of the published package — `.claude/skills` and `.cursor/skills` symlink to both folders so
+those skills are still available locally, but they're never committed or published under this
+package's name.
 
 ## Install in another project
 
